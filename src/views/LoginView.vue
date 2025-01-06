@@ -4,7 +4,9 @@ import { onMounted, onUnmounted, ref } from "vue";
 import { GButton } from "@/components/common";
 import userApi from "@/api/userApi";
 import Cookies from "@/utils/cookie";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const emailVal = ref();
 const passwordVal = ref();
 const isLoading = ref(false);
@@ -55,7 +57,9 @@ const onLogin = async () => {
 
 		Cookies.login(loginData);
 
-		return window.location.assign("/");
+		router.push({
+			name: "HomeView",
+		});
 	} else {
 		toast.error("Login failed. Please check your information again!", {
 			position: "top-right",
