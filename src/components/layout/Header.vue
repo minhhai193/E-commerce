@@ -4,6 +4,7 @@ import { onClickOutside } from "@vueuse/core";
 import userApi from "@/api/userApi.ts";
 import { useRouter, useRoute } from "vue-router";
 import { useCartStore } from "@/stores/cartStore";
+import Cookies from "@/utils/cookie";
 
 const router = useRouter();
 const route = useRoute();
@@ -25,6 +26,7 @@ const backToHome = () => {
 };
 
 const logOut = async () => {
+  Cookies.logout();
 	router.push({
     name: 'LoginView'
   });
