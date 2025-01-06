@@ -1,0 +1,1 @@
+import{a as e}from"./axios-upsvKRUO.js";const t={async login(r){try{return(await e.post("https://api.escuelajs.co/api/v1/auth/login",r)).data}catch(s){return console.error("Error:",s),null}},async getUser(){try{return(await e.get("https://api.escuelajs.co/api/v1/users/1")).data}catch(r){return console.error("Error:",r),null}}};export{t as u};
