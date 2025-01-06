@@ -38,12 +38,6 @@ const onLogin = async () => {
 	const response = await userApi.login(params);
 
 	if (response) {
-		toast.success("Login successful!", {
-			autoClose: 3000,
-			closeButton: true,
-			theme: "colored",
-		});
-
 		const loginData = [
 			{
 				name: "ACCESS_TOKEN",

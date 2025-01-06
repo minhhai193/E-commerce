@@ -39,7 +39,7 @@ const moveToDetail = (id: number) => {
 			params: { id },
 		})
 		.then(() => {
-			window.location.reload();
+			window.scrollTo(0, 0);
 		});
 };
 
