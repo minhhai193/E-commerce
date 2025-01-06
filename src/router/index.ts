@@ -4,7 +4,7 @@ import Cookie from "@/utils/cookie";
 import routes from "./routes";
 
 const router = createRouter({
-	history: createWebHistory("/"),
+	history: createWebHistory("/E-commerce"),
 	routes,
 });
 

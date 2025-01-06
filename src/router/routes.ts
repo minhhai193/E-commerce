@@ -1,6 +1,6 @@
 const routes = [
 	{
-		path: "/",
+		path: "/E-commerce",
 		name: "MainLayout",
 		component: () =>
 			import(
@@ -34,7 +34,7 @@ const routes = [
 		],
 	},
 	{
-		path: "/",
+		path: "/E-commerce",
 		name: "AuthLayout",
 		component: () =>
 			import(

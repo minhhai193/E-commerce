@@ -24,6 +24,12 @@ const backToHome = () => {
 	});
 };
 
+const logOut = async () => {
+	router.push({
+    name: 'LoginView'
+  });
+};
+
 const onSubmit = () => {
 	router.push({
 		name: "HomeView",
@@ -91,6 +97,7 @@ onMounted(async () => {
 				<div
 					v-if="isShowMenu"
 					class="gap-2 flex items-center absolute right-0 top-[110%] bg-[#4C4D4D] rounded-md px-4 py-3 md:w-[160px] transition hover:bg-primary cursor-pointer text-sm md:text-[16px]"
+					@click="logOut"
 				>
 					<i class="fa-solid fa-right-from-bracket"></i>
 					Logout
